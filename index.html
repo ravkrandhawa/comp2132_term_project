@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>COMP 2132 Project - Café Hangman</title>
+	<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="css/styles.css">
+
+	<script src="https://code.jquery.com/jquery-3.7.1.min.js" defer></script>
+	<script src="js/hangman.js" defer></script>
+</head>
+
+<body>
+	<header class="page-header">
+		<div class="header-content">
+			<p class="intro-label">COMP 2132 Term Project</p>
+			<h1>Café Hangman</h1>
+			<p>Guess the word before your coffee runs out!</p>
+		</div>
+	</header>
+
+	<main>
+		<div class="game-container">
+			<section class="coffee-section">
+				<h2 class="part-heading">Your Coffee</h2>
+
+				<div class="coffee-gallery">
+					<img id="coffee-image" src="images/coffee-0.png" alt="A full cup of coffee">
+
+					<p>Every incorrect guess brings you one sip closer to an empty cup!</p>
+				</div>
+			</section>
+
+			<section class="game-section">
+				<h2 class="part-heading">Guess the Word</h2>
+
+				<div class="game-content">
+					<div id="word-display"></div>
+
+					<p class="hint-label">Your Hint</p>
+					<p id="word-hint">Loading your word...</p>
+
+					<p id="guesses-remaining">Incorrect Guesses: 0 / 6</p>
+
+					<div id="letter-buttons"></div>
+
+					<p class="game-instructions">Guess the mystery word before your coffee cup is empty. Solve the word to win one free coffee!</p>
+				</div>
+			</section>
+		</div>
+	</main>
+
+	<div id="game-modal" class="modal-overlay" role="dialog" aria-modal="true" aria-labelledby="modal-title" aria-describedby="modal-message" aria-hidden="true">
+		<div class="modal-content">
+			<h2 id="modal-title"></h2>
+
+			<img id="modal-image" src="images/coffee-0.png" alt="Coffee cup">
+
+			<p id="modal-message"></p>
+			<p id="modal-word"></p>
+
+			<button id="play-again" class="control-button" type="button">Play Again</button>
+		</div>
+	</div>
+
+	<footer>
+		<p>Ravneet Randhawa | COMP 2132</p>
+	</footer>
+</body>
+</html>
